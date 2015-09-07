@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KDD MOOC Challenge</title>
+
+    <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, minimun-scale=1, maximum-scale=1'>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,400italic,700|Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/grid.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="main" role="main">
+      <div class="container-12 clearfix">
+        <div class="grid-4" id="left-panel">
+          <div class="selectors">
+            <div class="selector-container">
+              <h4>Select a Course</h4>
+              <select class="form-selector" id="course-selector"></select>
+            </div>
+
+            <div class="selector-container">
+              <h4>Select a Student</h4>
+              <label class="radio-inline"><input type="radio" name="student-type" value="0" />Drop-Out</label>
+              <label class="radio-inline"><input type="radio" name="student-type" value="1" />Non Drop-Out</label>
+              <label class="radio-inline"><input type="radio" name="student-type" value="2" checked />Random</label>
+            </div>
+
+            <div class="selector-container">
+              <button type="button" class="btn" id="selector-button"><i class="fa fa-hand-o-right"></i> Select</button>
+            </div>
+          </div>
+
+          <div class="features panel">
+            <div class="panel-title"><i class="fa fa-star"></i>&nbsp;&nbsp;Features</div>
+            <div class="panel-content">
+              <table cellspacing="0">
+                <tr>
+                  <td># of Events</td>
+                  <td class="feature-values"><span id="num-events"></span></td>
+                </tr>
+                <tr>
+                  <td># of Sessions</td>
+                  <td class="feature-values"><span id="num-sessions"></span></td>
+                </tr>
+                <tr>
+                  <td>Avg Session Length</td>
+                  <td class="feature-values"><span id="avg-session"></span> minutes</td>
+                </tr>
+                <tr>
+                  <td># of Events per Session</td>
+                  <td class="feature-values"><span id="num-events-per-session"></span></td>
+                </tr>
+                <tr>
+                  <td>Time in Course</td>
+                  <td class="feature-values"><span id="time-in-course"></span> hours</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-8" id="right-panel">
+          <div class="predictors right-panel-container panel">
+            <div class="panel-title"><i class="fa fa-line-chart"></i>&nbsp;&nbsp;Prediction Model</div>
+            <div class="panel-content">
+              <div class="split-panel"><h3>Predicted Drop-Out Chance</h3><h2 id="model-result"><span id="drop-out-percentage"></span> %</h2></div>
+              <div class="split-panel"><h3>Actual Data</h3><h2 id="actual-result"></h2></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+
+          <div class="graphs right-panel-container panel">
+            <div class="panel-title"><i class="fa fa-bar-chart"></i>&nbsp;&nbsp;Charts</div>
+            <div class="panel-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+  </body>
+</html>
